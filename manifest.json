@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Chess.com Session Tracker",
+  "version": "3.0",
+  "description": "Track live Chess.com session games: wins, losses, draws, and rating delta in real-time.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "https://www.chess.com/*"
+  ],
+  "host_permissions": ["https://www.chess.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chess-session-tracker@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
