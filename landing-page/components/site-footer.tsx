@@ -15,23 +15,17 @@ export function SiteFooter() {
       >
         <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
           <p className="text-sm text-muted-foreground">
-            © 2025 Streak – Made for Chess.com players by chess enthusiasts.
+            © {new Date().getFullYear()} Streak - Chess.com Chromium based Extension
           </p>
           <nav className="flex items-center gap-5 text-sm">
             <Link
-              href="https://github.com/yourusername/streak"
+              href="https://github.com/AvadhootSmart/Streak"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground underline-offset-4 hover:underline"
             >
               GitHub
             </Link>
-            <a href="#privacy" className="text-foreground underline-offset-4 hover:underline">
-              Privacy Policy
-            </a>
-            <a href="mailto:support@streakextension.com" className="text-foreground underline-offset-4 hover:underline">
-              Contact
-            </a>
           </nav>
         </div>
       </motion.div>

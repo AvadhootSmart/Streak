@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export function Hero() {
   return (
@@ -27,8 +27,9 @@ export function Hero() {
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Stay motivated and see your progress with Streak — the ultimate Chess.com Chrome extension for tracking
-              wins and losses in real time.
+              Stay motivated and see your progress with Streak — the ultimate
+              Chess.com Chrome extension for tracking wins and losses in real
+              time.
             </motion.p>
 
             {/* CTA */}
@@ -48,22 +49,26 @@ export function Hero() {
           </div>
 
           <motion.figure
-            className="mt-10 rounded-lg border bg-card p-2 shadow-sm md:mt-12"
+            className="mt-10 rounded-lg pb-1 border bg-card shadow-sm md:mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <video
-              className="aspect-video w-full rounded-md"
+              className="w-full"
               controls
+              autoPlay
               preload="metadata"
               muted
+              loop
               playsInline
-              poster="/streak-demo-preview-video-poster.jpg"
             >
               {/* When you have your demo, place it at /streak-demo.mp4 */}
-              <source src="/streak-demo.mp4" type="video/mp4" />
+              <source
+                src="https://res.cloudinary.com/do0wlwyez/video/upload/v1760553313/streak-demo_whdhe8.mp4"
+                type="video/mp4"
+              />
               {"Your browser does not support the video tag."}
             </video>
             <figcaption className="mt-3 text-center text-sm text-muted-foreground">
@@ -73,5 +78,5 @@ export function Hero() {
         </div>
       </div>
     </header>
-  )
+  );
 }
