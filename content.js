@@ -12,14 +12,14 @@ function createOverlay() {
   overlay = document.createElement("div");
   overlay.id = "chess-session-overlay";
   overlay.innerHTML = `
+    <div id="chess-session-results"></div>
     <p>
       Games: <span id="games">0</span> |
       <span class="win-text">W: <span id="wins">0</span></span> |
       <span class="loss-text">L: <span id="losses">0</span></span> |
       <span class="draw-text">D: <span id="draws">0</span></span>
     </p>
-    <p>Delta: <span id="rating">0</span></p>
-    <div id="chess-session-results"></div>
+    <p>Rating: <span id="rating">+0</span></p>
     <button id="toggle-session">Start Session</button>
   `;
   document.body.appendChild(overlay);
