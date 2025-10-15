@@ -56,7 +56,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <video
-              className="w-full"
+              className="w-full rounded-t-md"
               controls
               autoPlay
               preload="metadata"
